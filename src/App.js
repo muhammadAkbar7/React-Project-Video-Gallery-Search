@@ -8,7 +8,7 @@ function App() {
   const [term, setTerm] = useState(''); // (a) this is for our search term, we can utilize this so we can change it to the terms in the link below to a specific/general term
 
   useEffect(() => { // create a function & utilize fetch to get the pixabay photos
-    fetch(`https://pixabay.com/api/?key=31143910-dc355e3171fa22d4ff2f70726&q=${term}&image_type=photo&pretty=true`)
+    fetch(`https://pixabay.com/api/videos/?key=31143910-dc355e3171fa22d4ff2f70726&q=${term}&pretty=true`)
     // if you add something to .env (our key), we have to restart the server
     .then(res => res.json())
     .then(data => {
@@ -16,7 +16,28 @@ function App() {
       setIsLoading(false); // we already got the data (already loaded) in this instance
     })
     .catch(err => console.log(err));
-  }, [term]); // term = dependecy; this means whenever term changes the use effect funciton will run again 
+  }, [term])
+  // colorLinks("green")
+  ;
+
+// function colorLinks(hex)
+// {
+//     var links = document.getElementsByTagName("a");
+//     // links.addEventListener('click', function onClick() {
+//     //   links.style.backgroundColor = 'salmon';
+//     //   links.style.color = 'green';
+//     // });
+//     for(var i=0;i<links.length;i++)
+//     {
+//         if(links[i].href)
+//         {
+//             links[i].style.color = hex;  
+//         }
+//     }  
+// }
+  
+  
+  ; // term = dependecy; this means whenever term changes the use effect funciton will run again 
 
 
 // <script>
@@ -38,23 +59,23 @@ function App() {
   function clickFunction() {
     document.getElementsByTagName("a").color = "red";
   } */
-colorLinks("green");
+// colorLinks("green");
 
-function colorLinks(hex)
-{
-    var links = document.getElementsByTagName("a");
-    // links.addEventListener('click', function onClick() {
-    //   links.style.backgroundColor = 'salmon';
-    //   links.style.color = 'green';
-    // });
-    for(var i=0;i<links.length;i++)
-    {
-        if(links[i].href)
-        {
-            links[i].style.color = hex;  
-        }
-    }  
-}
+// function colorLinks(hex)
+// {
+//     var links = document.getElementsByTagName("a");
+//     // links.addEventListener('click', function onClick() {
+//     //   links.style.backgroundColor = 'salmon';
+//     //   links.style.color = 'green';
+//     // });
+//     for(var i=0;i<links.length;i++)
+//     {
+//         if(links[i].href)
+//         {
+//             links[i].style.color = hex;  
+//         }
+//     }  
+// }
 
 // var links = document.getElementsByTagName("a");
 // links.addEventListener('click', function onClick() {
@@ -73,7 +94,7 @@ function colorLinks(hex)
 
       {/*This is a condition that states if the picture is not loading and the image array in our length is equal to 0 */}
       {/*Then it will display the text, no images found... */}
-      {!isLoading && images.length === 0 && <h1 className="text-6xl text-center mex-auto mt-32"> No Images Found </h1> }
+      {!isLoading && images.length === 0 && <h1 className="text-6xl text-center mex-auto mt-32"> No Videos Found </h1> }
 
       {isLoading ? <h1 className="text-6xl text-center mex-auto mt-32"> Loading... </h1>:  <div className="grid grid-cols-3 gap-4"> 
       {/*This makes a grid w/3 columns and a gap of 4*/}

@@ -7,11 +7,11 @@ const ImageCard = ({ image }) => {
 
     return (
         <div className="max-w-sm rounded overflow-hidden shadow-lg">
-        <img src={image.webformatURL} alt="Random Image"
+        <img src={`https://i.vimeocdn.com/video/${image.picture_id}_1920x1080.jpg`} alt="Random Image"
         className="w-full"/>
         <div className="px-6 py-4">
           <div className="font-bold text-purple-500 text-xl mb-2">
-            Photo by {image.user}
+            Video by {image.user}
           </div>
           <ul>
             <li>

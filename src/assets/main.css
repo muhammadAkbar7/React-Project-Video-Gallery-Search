@@ -655,3 +655,15 @@ video {
   outline: 2px solid transparent;
   outline-offset: 2px;
 }
+
+a:link {
+  color: burlywood;
+}
+
+a:visited {
+  color: green;
+}
+
+a:active {
+  color: blue;
+}
