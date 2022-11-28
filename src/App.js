@@ -38,7 +38,7 @@ function App() {
   function clickFunction() {
     document.getElementsByTagName("a").color = "red";
   } */
-colorLinks("green");
+colorLinks("blue");
 
 function colorLinks(hex)
 {
