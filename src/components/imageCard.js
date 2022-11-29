@@ -31,6 +31,11 @@ const ImageCard = ({ image }) => {
                 Source Link
               </a>      
             </li>
+            <li>
+              <a href={`https://pixabay.com/videos/download/video-${image.id}_medium.mp4?attachment`}>
+                Download Link
+                </a>
+            </li>
           </ul> 
         </div>
         <div className='px-6 py-4'>

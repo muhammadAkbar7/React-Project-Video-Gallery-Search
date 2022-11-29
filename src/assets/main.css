@@ -657,11 +657,15 @@ video {
 }
 
 a:link {
-  color: burlywood;
+  color: green;
 }
 
 a:visited {
-  color: green;
+  color: burlywood;
+}
+
+a:hover {
+  color: brown;
 }
 
 a:active {
