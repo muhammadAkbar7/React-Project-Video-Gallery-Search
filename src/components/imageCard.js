@@ -10,7 +10,7 @@ const ImageCard = ({ image }) => {
         <img src={`https://i.vimeocdn.com/video/${image.picture_id}_1920x1080.jpg`} alt="Random Image"
         className="w-full"/>
         <div className="px-6 py-4">
-          <div className="font-bold text-purple-500 text-xl mb-2">
+          <div className="font-bold text-sky-500 text-xl mb-2">
             Video by {image.user}
           </div>
           <ul>
@@ -41,9 +41,9 @@ const ImageCard = ({ image }) => {
         <div className='px-6 py-4'>
             {tags.map((tag, index) => ( // needs a key since it is a list this is a test
                                // cannot use image.id in span key; use index since it is a second parameter to a map 
-                          <span key={index} className='inline-block bg-gray-200 rounded-full
+                          <span key={index} className='inline-block bg-amber-100 rounded-full
                           px-3 py-1 text-sm font-semibold text-gray-700 mr-2'>
-                            #{tag}
+                            # {tag}
                           </span>
             ))}
 
