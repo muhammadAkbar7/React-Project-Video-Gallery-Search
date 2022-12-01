@@ -17,7 +17,6 @@ function App() {
     })
     .catch(err => console.log(err));
   }, [term])
-  // colorLinks("green")
   ;
   return (
     <div className="container mx-auto"> 
